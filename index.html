@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brno</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Reset základního stylu */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Tělo stránky s pozadím */
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        /* Sekce pro swipování */
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        /* Animace pro pozadí ve stylu polární záře */
+        @keyframes aurora {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+
+        /* Definování sekcí s různými pozadími */
+        .section-one {
+            background: linear-gradient(135deg, #3e6e77, #9b3d62, #4eab80);
+            background-size: 200% 200%;
+            animation: aurora 10s ease-in-out infinite;
+        }
+
+        .section-two {
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            background-size: 200% 200%;
+            animation: aurora 12s ease-in-out infinite;
+        }
+
+        .section-three {
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            background-size: 200% 200%;
+            animation: aurora 15s ease-in-out infinite;
+        }
+
+        /* Obsah */
+        .content h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.5rem;
+        }
+
+        /* Efekt pro swipe */
+        .swipe-effect {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 1.2rem;
+            opacity: 0.7;
+        }
+
+        /* Galerie fotek */
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 30%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+    </style>
+</head>
+<body>
+
+    <section class="section-one">
+        <div class="content">
+            <h1>Vítejte v Brně</h1>
+            <p>Brno je druhé největší město České republiky, plné historie, kultury a moderního života.</p>
+            <div class="gallery">
+                <img src="images/spilberk.jpg" alt="Hrad Špilberk">
+                <img src="images/katedrala.jpg" alt="Katedrála svatého Petra a Pavla">
+                <img src="images/vankovka.jpg" alt="Vaňkovka">
+            </div>
+        </div>
+        <div class="swipe-effect">Swipe Up for More</div>
+    </section>
+
+    <section class="section-two">
+        <div class="content">
+            <h1>Historie Brna</h1>
+            <p>Brno má bohatou historii sahající až do 11. století, s mnoha historickými památkami, jako je hrad Špilberk nebo Katedrála svatého Petra a Pavla.</p>
+        </div>
+        <div class="swipe-effect">Swipe Up for More</div>
+    </section>
+
+    <section class="section-three">
+        <div class="content">
+            <h1>Moderní Brno</h1>
+            <p>Brno je také známé svými technologickými inovacemi a univerzitami. Je to město, které roste a inovuje.</p>
+        </div>
+        <div class="swipe-effect">Swipe Up for More</div>
+    </section>
+
+</body>
+</html>
